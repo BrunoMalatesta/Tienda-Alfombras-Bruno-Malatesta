@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import "./ItemCount.css"
 
 export const ItemCount = ({ stock, initial, onAdd }) => {
 
@@ -18,8 +19,8 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
   };
 
   return (
-    <div>
-      <h3>{count}</h3>
+    <div className='itemcount'>
+      <h3 className='contador'>{count}</h3>
       <button onClick={handlerClickRestar}>-</button>
       <button onClick={handlerClickSumar}>+</button>
       <button disabled={stock === 0 } onClick={()=>onAdd(count)}>

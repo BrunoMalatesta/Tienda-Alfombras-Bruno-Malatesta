@@ -1,29 +1,26 @@
 import React from "react";
 import './Navbar.css'
-import Logo from "../../assets/LOGODANI1.jpg";
+import Logo from "../../assets/LOGODANI2.jpg";
 import { CartWidget } from "../CartWidget/CartWidget"
 import { Link, NavLink } from "react-router-dom";
 
-const Navbar =  ({ nombreUsuario }) => {
-
+const Navbar =  () => {
     const categorias = [
-        {nombre:"men's clothing", id:0, ruta:"/categoria/men's clothing"},
-        {nombre:"jewelery", id:1, ruta:"/categoria/jewelery"},
-        {nombre:"electronics", id:2, ruta:"/categoria/electronics"},
-        {nombre:"women's clothing", id:3, ruta:"/categoria/women's clothing"},
+        {nombre:"Alfombras", id:0, ruta:"/categoria/Alfombra"},
+        {nombre:"Almohadas", id:1, ruta:"/categoria/Almohada"},
+        {nombre:"Cuadros", id:2, ruta:"/categoria/Cuadro"},
+        {nombre:"Lamparas", id:3, ruta:"/categoria/Lampara"},
       ];
 
-
     return (
-        <header> 
+        <header className="headermain"> 
           <Link to="/">
-              <img src={Logo} alt="logo daniela" />
+              <img className="imagenlogo" src={Logo} alt="logo daniela" />
           </Link>
-          <h1>Bienvenido {nombreUsuario} </h1>
-        <nav>
+        <nav className="categoriasnav">
         { 
           categorias.map((categoria)=>{
-            return <NavLink key={categoria.id} to={categoria.ruta}>{categoria.nombre}</NavLink>
+            return <NavLink key={categoria.id} to={categoria.ruta}><p className="botoncategoria">{categoria.nombre}</p></NavLink>
           })}
         </nav>
           <Link to="/cart">
@@ -31,7 +28,6 @@ const Navbar =  ({ nombreUsuario }) => {
           </Link>
         </header>
     )
-         
 }
 
 export default Navbar;

@@ -55,7 +55,7 @@ export const ItemListContainer = ({greeting}) => {
     {
       <>
         {loading ? <ClockLoader color="#1a7764" cssOverride={propiedades} loading size={100} speedMultiplier={1} /> : <ItemList productos={productos}/>}
-       
+      
       </>
     }
     </>

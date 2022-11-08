@@ -1,0 +1,25 @@
+.imgcarro{
+    width: 10%;
+}
+
+.cardcarro{
+display: flex;
+border: inset;
+border-radius: 1px;
+border-color: rgb(0, 0, 0);
+
+}
+
+.cardtamaño{
+    padding:10px;
+    width: 50%;
+}
+
+.countcarro{
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+}
+.counttotal{
+    background-color:rgb(246, 172, 23);
+}

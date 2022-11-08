@@ -1,28 +1,25 @@
-header {
-    position: sticky;
+.headermain {
     display: flex;
-    align-items: center;
-    background-color: rgb(135, 163, 122);
+    background-color: rgb(3, 4, 4);
     font-family: sans-serif;
 }
 
-img {  
-    width: 100px;
-    height: 100px;
+.imagenlogo{
+    width: 7%;
+    padding: 2px;
+    padding-top: 4px;
 }
 
-a {
-    color: black;
+.botoncategoria{
+    color: rgb(255 255 255 / 90%);
     padding-left: 20px;
     margin: 10px;
     text-decoration: none;
-   
 }
 
-button { 
-    background-color: rgb(116, 139, 105);
-}
 
-card-item {
+.categoriasnav{
     display: flex;
+    align-items: center;
+    padding-right: 100px;
 }

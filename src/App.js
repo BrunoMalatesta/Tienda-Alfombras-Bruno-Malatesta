@@ -9,17 +9,15 @@ import { CustomProvider } from "./context/CartContext";
 import {Formulario} from "./Containers/Form/Formulario";
 
 const App = () => {
-
-  const nombre = "Bruno";
   
-  const mensaje = "Las Mejores Ofertas !"
+  const mensaje = "Todos Nuestros productos Artesanales."
 
 
   return (
     <>
       <BrowserRouter>
         <CustomProvider>
-          <Navbar nombreUsuario={nombre}/>
+          <Navbar/>
           <Routes>
             <Route path="/" element={<ItemListContainer greeting={mensaje}/>}/>
             <Route path="/categoria/:id" element={<ItemListContainer greeting={mensaje}/>} />

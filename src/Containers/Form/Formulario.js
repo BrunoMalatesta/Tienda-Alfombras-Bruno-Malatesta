@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import 'semantic-ui-css/semantic.min.css'
 import {Container, Form, Button} from "semantic-ui-react"
 import {useFormik} from "formik";
@@ -10,10 +10,9 @@ import Swal from 'sweetalert2';
 
 
 
+
 export const Formulario = () => {
   const {cart, total, clear } = useContext(Context);
-  const [ comprador, setComprador ] = useState({});
-
   const formik = useFormik({
     initialValues: {
         name:"",
@@ -26,19 +25,14 @@ export const Formulario = () => {
       direccion: Yup.string().required("La contraseña es obligatoria"),
     }),
     onSubmit:(formData) => {
-      console.log(formData)
-      setComprador(formData)
- 
-    } 
+      finalizarCompra(formData)
+} 
     
  })
-
-const finalizarCompra = ()=>{
+const finalizarCompra = (data)=>{
   const  ventasCollection = collection(db, "ventas");
   addDoc(ventasCollection,{
-    buyer: {
-        comprador
-    },
+    buyer: data,
     items: cart,
     total: total
 })
@@ -59,6 +53,7 @@ const finalizarCompra = ()=>{
   });
   modificarStock(cart);
   clear();
+  
 }
 
 const modificarStock = () => {
@@ -67,13 +62,8 @@ const modificarStock = () => {
       updateDoc(product, {stock: item.stock - item.quantity})
   })
 }
-
-
-
-
-
-
-  return (
+  
+return (
     <Container>
       <h1>Completa el Formulario para finalizar la compra</h1>
       <Form onSubmit={formik.handleSubmit}>
@@ -81,11 +71,9 @@ const modificarStock = () => {
           <Form.Input type="email" placeholder="Correo Electronico" name="email"onChange={formik.handleChange} error={formik.errors.email} value={formik.values.email}/>
           <Form.Input type="text" placeholder="Direccion" name="direccion"onChange={formik.handleChange} error={formik.errors.direccion} value={formik.values.direccion}/>
 
-          <Button type="submit" onClick={finalizarCompra}>Finalizar Compra</Button>
+          <Button type="submit">Finalizar Compra</Button>
           <Button type="button" onClick={formik.handleReset}>Limpiar Formulario</Button>
       </Form>
     </Container>
   )
 }
-
-

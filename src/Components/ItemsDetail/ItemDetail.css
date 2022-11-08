@@ -1,4 +1,10 @@
 .item{
-    background-color:  rgb(135, 163, 122);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
+.itemimg{
+    width: 15%;
+}

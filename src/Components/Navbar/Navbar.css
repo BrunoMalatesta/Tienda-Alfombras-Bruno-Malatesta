@@ -1,0 +1,28 @@
+header {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    background-color: rgb(135, 163, 122);
+    font-family: sans-serif;
+}
+
+img {  
+    width: 100px;
+    height: 100px;
+}
+
+a {
+    color: black;
+    padding-left: 20px;
+    margin: 10px;
+    text-decoration: none;
+   
+}
+
+button { 
+    background-color: rgb(116, 139, 105);
+}
+
+card-item {
+    display: flex;
+}

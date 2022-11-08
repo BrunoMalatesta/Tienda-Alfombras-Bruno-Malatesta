@@ -28,7 +28,7 @@ export const Formulario = () => {
       finalizarCompra(formData)
 } 
     
- })
+})
 const finalizarCompra = (data)=>{
   const  ventasCollection = collection(db, "ventas");
   addDoc(ventasCollection,{

@@ -10,14 +10,7 @@ export  const ItemList = ({productos}) => {
     {
         productos.map((producto)=> {
             return < Item key={producto.id} productos={producto}/>
-           
         }
-
-        )
-    }
-        
-    </>
-    )
-}
+)}</>)}
 
 

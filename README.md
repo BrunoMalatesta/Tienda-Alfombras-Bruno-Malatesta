@@ -23,6 +23,6 @@
 
 [Perfil GitHub Desarollador](https://github.com/BrunoMalatesta)
 
-[Perfil GitHub Desarollador](https://katzerugs.netlify.app/)
+[Host del Sitio Web](https://katzerugs.netlify.app/)
 
 ![imagen-de-fondo](https://www.cinepremiere.com.mx/wp-content/uploads/2020/06/Elmo-en-llamas.gif)

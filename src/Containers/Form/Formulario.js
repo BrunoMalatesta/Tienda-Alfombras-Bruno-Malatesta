@@ -38,7 +38,6 @@ const finalizarCompra = (data)=>{
 })
 
   .then(result => {
-      console.log(result.id);
       Swal.fire({
           title: 'Gracias por su compra!',
           html: `Numero de Referencia de Compra: <b>${result.id}</b>`,

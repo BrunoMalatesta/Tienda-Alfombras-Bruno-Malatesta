@@ -1,16 +1,22 @@
 .containerCard{
-    max-width: 250px;
+    max-width: 190px;
     margin: 10px;
     box-shadow: 2px 6px 3px 3px rgb(0 0 0 / 30%);
     background-color: #ffff;
     border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+    display: inline-block;
 }
 
 .imagenprodcutos{
     width: 100%;
 }
 
+.descripcioncard{
+    display: flex;
+    flex-direction: column;
+    padding-left: 45px;
+}
+
+.botondescripcion{
+    margin-left: 16px;
+}

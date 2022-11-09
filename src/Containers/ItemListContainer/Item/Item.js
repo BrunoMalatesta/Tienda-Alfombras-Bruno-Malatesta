@@ -9,14 +9,15 @@ export  const Item = ({productos}) =>{
         <div>
             <img className='imagenprodcutos' src={productos.image} alt="" />
         </div>
-    
-        <p>{productos.title}.</p>
-        <p></p>
-        <p>Precio: ${productos.price}</p>
-        
-        <Link to={"/producto/"+ productos.id}>
-            <button>detalles</button>
-        </Link>
+        <div className='descripcioncard' >
+            <p>{productos.title}.</p>
+            <p></p>
+            <p>Precio: ${productos.price}</p>
+
+            <Link to={"/producto/"+ productos.id}>
+                <button className='botondescripcion'>detalles</button>
+            </Link>
+        </div>
     </div>
 )}
 

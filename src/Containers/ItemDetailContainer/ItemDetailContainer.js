@@ -39,12 +39,19 @@ export const ItemDetailContainer = ({ greeting }) => {
 }, [ id ]);
 
 
+
+const propiedades = {
+  display: "block",
+  margin: "0 auto",
+  
+};
+
     return (
       <>
         <h1>{greeting}</h1>
         {
           <>
-            {loading ? <ClockLoader color="#1a7764"  loading size={100} speedMultiplier={1} /> : <ItemDetail producto={producto} />}</>}
+            {loading ? <ClockLoader color="#1a7764"  cssOverride={propiedades} loading size={100} speedMultiplier={1} /> : <ItemDetail producto={producto} />}</>}
         
       </>
     );

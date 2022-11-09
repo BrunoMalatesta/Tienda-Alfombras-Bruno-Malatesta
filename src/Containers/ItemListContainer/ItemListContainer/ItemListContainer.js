@@ -51,7 +51,7 @@ export const ItemListContainer = ({greeting}) => {
 
   return (
     <>
-    <h1>{greeting}</h1>
+  <div><h1 className='mensaje'>{greeting}</h1></div>
     {
       <>
         {loading ? <ClockLoader color="#1a7764" cssOverride={propiedades} loading size={100} speedMultiplier={1} /> : <ItemList productos={productos}/>}

@@ -16,7 +16,7 @@
 
 ## Como iniciar Proyecto:
 * Instalar React en Pc.
-* Run : npm install  y esperar a que se instalen todas las librerias usadas en este proyecto.
+* Run : npm install , esperar a que se instalen todas las librerias y dependencias usadas en este proyecto.
 * Run : npm Start para levantar el proyecto en tu puerto :  http://localhost:3000 . 
 
 [GitHub del projecto](https://github.com/BrunoMalatesta/Tienda-Alfombras-Bruno-Malatesta)
